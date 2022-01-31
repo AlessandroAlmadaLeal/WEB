@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+
+}
+
+body{
+
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+
+}
+
+.container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: gainsboro;
+    
+}
+
+.content{
+
+    background-color: dimgrey;
+    border-radius: 15px;
+    width: 960px;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+
+.content::before{
+
+    content: "";
+    position: absolute;
+    background-color: darkslategray;
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    left:0%;
+
+}
+
+.title{
+    
+    font-size: 28px;
+    color: floralwhite;
+    font-weight: bold;
+    text-transform: capitalize;
+
+}
+
+.title-welcome{
+    
+ color: floralwhite;
+
+}
+
+.description{
+
+    font-size: 14px;
+    font-weight: 300;
+    color: floralwhite;
+    line-height: 30px;
+
+}
+
+.btn{
+
+    background-color: transparent;
+    border-radius: 15px;
+    color: floralwhite;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 250px;
+    align-self: center;
+
+}
+
+.btn-primary{
+
+    background-color: transparent;
+    border: 1px solid floralwhite;
+    margin-top: 5px;
+
+}
+
+.btn-secondary {
+
+    background-color: transparent;
+    border: 1px solid floralwhite;
+    margin-top: 5px;
+
+}
+
+.btn-primary:hover{
+
+    background-color: floralwhite;
+    color: darkslategrey;
+    transition: background-color .8s;
+
+}
+
+.btn-secondary:hover{
+
+    background-color: floralwhite;
+    color: darkslategrey;
+    transition: background-color .8s
+
+}
+
+.first-column{
+
+    text-align: center;
+    flex: 1 0 auto;
+
+}
+
+.first-content{
+
+    display: flex;
+
+}
+
+.first-content .first-column, .second-column{
+
+    z-index: 1;
+
+}
+.second-column{
+
+    flex: 2 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.second-content{
+
+    position: absolute;
+    display: none;
+    
+
+}
+
+.second-content .first-column{
+
+    order: 2;
+    
+}
+
+.second-content .second-column{
+
+    order: 1;
+
+}
+
+.list-social-media{
+
+    display: flex;
+
+}
+
+.form{
+
+    display:flex;
+    width: 55%;
+    flex-direction: column;
+
+    text-align: center;
+
+}
+
+.form input{
+    
+    height: 40px;
+    border: none;
+    background-color: floralwhite;
+    width: 100%;
+    outline: none;
+
+}
+
+.label-input{
+
+    background-color: floralwhite;
+    border-radius: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    margin: 3px;
+    
+}
+
+.icon-modify{
+
+    color:  #bdc3c7;
+    padding: 0px 5px;
+
+}
+
+.list-social-media{
+
+    list-style-type: none;
+
+}
+
+.item-social-media {
+
+    border: 1px solid #bdc3c7;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.item-social-media:hover{
+
+    background-color: floralwhite;
+    color: darkslategrey;
+    transition: background-color .8s
+
+}
+
+.item-social-media:not(:first-child){
+
+    margin-left: 10px;
+
+}
+
+.item-social-media a {
+
+    color: #95a5a6
+
+}
+
+.password {
+
+    text-align: center;
+    font-size: 14px;
+    margin: 15px 0;
+
+}
+
+.password::first-letter{
+
+    text-transform: capitalize;
+}
+
+.sign-in-js .first-content .first-column,
+.sign-in-js .first-content .second-column{
+
+    z-index: -1;
+
+}
+
+.sign-in-js .second-content .first-column,
+.sign-in-js .second-content .second-column{
+
+    z-index: 1;
+
+}
+
+.sign-in-js .content::before{
+
+    left: 60%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.sign-up-js .first-content .first-column,
+.sign-up-js .first-content .second-column{
+
+    z-index: -1;
+
+}
+
+.sign-up-js .second-content .first-column,
+.sign-up-js .second-content .second-column{
+
+    z-index: 1;
+
+}
+
+.sign-up-js .content::before{
+
+    left: 0%;
+
+}
+

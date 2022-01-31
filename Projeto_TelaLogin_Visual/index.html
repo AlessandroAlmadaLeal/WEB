@@ -1,0 +1,225 @@
+<!--PROJETO: Tela de login de GUilherme Chinaglia - Youtube...
+Este é um projeto desenvolvido a partir da lista de videos em: 
+1 - https://www.youtube.com/watch?v=GtsNZtzZiec
+2 - https://www.youtube.com/watch?v=NbMb0QPr2Iw
+3 - https://www.youtube.com/watch?v=hzuSbLe6v7Y
+4 - https://www.youtube.com/watch?v=i1HNECW4imc
+5 - https://www.youtube.com/watch?v=IphMgLFPR6w
+Comentado e re-desenvolvido por Alessandro Leal, alguns pontos foram acidionados 
+alem dos constados nos videos... Atentar às notas-->
+
+<!DOCTYPE html>
+
+    <html lang="pt-br">
+
+    <head><!-- Abrindo o cabeçalho para configurarmos alguns parâmetros-->
+
+        <!--Segue os parametros de configuração da seção-->
+        <meta charset ="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
+
+        <!--Chamando o CSS que aplicará o estilo programado na pasta css (mesmo diretório)-->
+        <link rel="stylesheet" href="css\style.css">
+        
+        <!--Chamando os icones do site font awesome-->
+        <script src="https://kit.fontawesome.com/404d968510.js" crossorigin="anonymous"></script>
+
+        <!-- O titulo para aparecer na guia do navegador-->
+        <title>Login</title>
+
+    </head><!-- Fechamos o cabeçalho-->
+
+    <body> <!-- A partir deste ponto editamos o corpo do site!-->
+
+        <!--Criamos um container para embarcar o todo, como container é um tipo de divisão então usamos 'div'-->
+        
+        <div class="container">
+            
+            <!--Vamos criar mais uma divisão de conteúdo, ambos serão carregados neste container
+            Associe este primeiro conteúdo à cadastro de novos developers-->
+                        
+            <div class="content first-content">
+
+                <!--Assim como uma tabela, vamos criar duas colunas-->
+                   
+                <div class="first-column">
+                        
+                    <!--Nessa primeira coluna vamos colocar as informações de login-->
+                        
+                    <h2 class="title title-welcome">Welcome back!</h2>
+                    <p class="description">To keep connected with us</p>
+                    <p class="description">Please login with your personal info.</p>
+
+                    <!--Este botão serve para alternarmos a visibilidade dos conteúdos com animação via Java
+                    Clicou nele, vamos para "content second-content"-->
+                        
+                    <button id="signin" class="btn btn-primary">Sign in</button>
+                    
+                </div>
+
+                <!--Nessa segunda coluna vamos colocar as informações referente ao cadastro de usuário-->
+                <div class="second-column">
+                        
+                    <h2 class="title">Create account</h2>
+
+                    <!--Hoje em dia é comum querermos aproveitar logins de outras redes sociais
+                    Inclusíve algumas delas oferecem API's para que possamos usar no cadastro
+                    Isso minimiza o trabalho maçante do usuário ficar preenchendo um milhão de
+                    formulários, ao mesmo tempo que divulga as redes sociais que também retro-
+                    alimentam sua malha de dados de usuário para Big data...
+                    
+                    Sem mais, vamos colocar uma lista de icones para suplementar esse tipo de cadastro-->
+
+                    <div class="social-media">
+                                
+                        <ul class="list-social-media">
+                                    
+                            <li class="item-social-media">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            </li><!--Link para o fecebook em lista de topico-->
+                                
+                            <li class="item-social-media">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </li><!--Link para o linked in em lista de topico-->
+                                   
+                            <li class="item-social-media">
+                                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                            </li><!--Link para o gmail em lista de topico-->
+                                
+                        </ul>
+                            
+                    </div><!--Para implantar basta colocar o link em href...-->
+                            
+                    <!--Temos que pensar que o usuário pode optar por usar um outro servico de e-mail
+                    que não oferece o recurso acima, nesse caso não tem o que fazer, ele vai ter que
+                    se cadastrar manualmente... Vamos criar o formulário-->
+
+                    <p class="description">Or use your e-mail for registration</p>
+                            
+                    <form class="form">
+
+                        <!--Campo para digitar o nome-->
+                        <label class="label-input" for="">
+
+                            <i class="fas fa-user icon-modify"></i>        
+                            <input type="text" placeholder="Name">
+                                
+                        </label>
+
+                        <!--Campo para digitar o e-mail-->
+                        <label class="label-input" for="">
+                                   
+                            <i class="fas fa-envelope icon-modify"></i>
+                            <input type="e-mail" placeholder="E-mail">
+                                
+                        </label>
+
+                        <!--Campo para digitar a senha-->
+                        <label class="label-input"  for="">
+                                    
+                            <i class="fas fa-lock icon-modify"></i>
+                            <input type="password" placeholder="Password">
+                                
+                        </label>
+
+                        <!--Temos um botão de "Sign Up" para postarmos os dados digitados para o banco de dados
+                        isso vai ser importante quando usarmos a integração com o PHP [POST]-->
+                            
+                        <button class="btn btn-secondary">Sign up</button>
+                                
+                    </form><!--Fechando o formulário-->
+
+                </div> <!--Fechando a segunda coluna-->
+
+            </div><!--Fechamos o primeiro conteúdo -->
+
+            <!--Este será o segundo conteúdo a ser carregado neste container, associe este segundo conteúdo
+            ao login de dev's já cadastrados-->
+
+            <div class="content second-content">
+
+                <!--Ná primeira coluna uma mensagem de saudação para o visitante 
+                oferecendo que se junte a nós!-->
+                        
+                <div class="first-column">
+                        
+                    <h2 class="title">Hello, friend!</h2>
+                    <p class="description">Enter your personal details</p>
+                    <p class="description">and start your journey with us.</p>
+                            
+                    <!--O Botão aqui é gatilho para alternar os conteúdos com a animação no Java!!!
+                    Clicou nele retornamos para o "first-contant"-->
+                            
+                    <button id="signup" class="btn btn-secondary">Sign up</button>
+                        
+                </div><!--Fechamos a primeira coluna-->
+
+                <!--Caso você seja um desenvolvedor pode logar por aqui!-->
+                        
+                <div class="second-column">
+                        
+                    <h2 class="title">Sign in to developer</h2>
+                        
+                    <!--É importante entregar as mesmas funcionalidades de cadastro no login dos usuários
+                    aqui você observa, simétricamente, a mesma lista de icones para acesso às redes socias 
+                    abordada anteriormente, no contexto do segundo conteúdo-->
+                       
+                    <div class="social-media">
+                            
+                        <ul class="list-social-media">
+                                        
+                            <li class="item-social-media">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            </li><!--Link para o fecebook em lista de topico-->
+                                  
+                            <li class="item-social-media">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </li><!--Link para o linked in em lista de topico-->
+                                
+                            <li class="item-social-media">
+                                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                            </li><!--Link para o gmail em lista de topico-->
+                                    
+                        </ul><!--Fechamos a lista de icones-->
+                        
+                    </div><!--Fechamos as midias sociais-->
+                        
+                    <p class="description">Or use your e-mail account</p>
+                        
+                    <form class="form">
+                            
+                        <label class="label-input" for="">
+                                   
+                            <i class="fas fa-envelope icon-modify"></i>
+                            <input type="e-mail" placeholder="E-mail">
+                                
+                        </label>
+
+                        <!--Campo para digitar a senha-->
+                        <label class="label-input"  for="">
+                                    
+                            <i class="fas fa-lock icon-modify"></i>
+                            <input type="password" placeholder="Password">
+                                
+                        </label>
+
+                        <!--Importante lembrarmos do famoso "esqueci minha senha"!-->
+                        <a class="password" style="color:#e1e0e7;" href="#" >forgot your password?</a>
+                        
+                        <button class="btn btn-primary">Sign in</button>
+                    
+                    </form><!--Fechamos o segundo formulário-->
+                        
+                </div><!--Fechamos a segunda coluna do segundo conteúdo-->
+                    
+            </div><!--Fechamos o segundo conteúdo-->
+            
+        </div><!--Fechamos o conteiner-->
+
+        <!--Chamando o JavaScript para automação-->
+        <script src="js\function.js"></script>
+
+    </body><!--Fechamos o corpo da página-->
+
+</html><!--Fechamos o código HTML-->
